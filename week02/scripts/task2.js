@@ -20,7 +20,6 @@ document.querySelector("#year").innerHTML = currentYear;
 let mainImage = "images/myImage.png"
 document.querySelector("img").setAttribute("src", mainImage);
 
-
 /* ARRAYS */
 
 // Step 1: declare and instantiate an array variable to hold your favorite foods
