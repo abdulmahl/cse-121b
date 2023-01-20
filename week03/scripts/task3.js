@@ -117,7 +117,3 @@ let sumOfMultiplied = function(num1, num2 ) {
 }
 let multipliedArray = arrayNumbers.map(multiplied);
 document.querySelector("#sumOfMultiplied").innerHTML = multipliedArray.reduce(sumOfMultiplied);
-
-// [1,2,3,4,5].map((number) => number * 2).reduce((total, currentNumber) => total + currentNumber,0)
-
-// document.querySelector("#sumOfMultiplied").innerHTML = [1,2,3,4,5].map(sumOfArray);
