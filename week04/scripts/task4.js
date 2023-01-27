@@ -18,13 +18,13 @@ const infoAboutSelf = {
     hobbies: ["Reading", "Swimming", "Going out to the mall"],
     placesLived: [
         {
-            Place: "",
-            Length: ""
+            Place: "Mamelodi",
+            Length: "33 Years"
         },
 
         {
-            Place: "",
-            Length: ""
+            Place: "Moretele View",
+            Length: "2 Years"
         },
     ]
 };
@@ -40,16 +40,36 @@ document.getElementById("photo").setAttribute("src", infoAboutSelf.photo);
 document.getElementById("photo").setAttribute("alt", infoAboutSelf. photo);
 
 // Step 4: For each favorite food in the favoriteFoods property, create an HTML <li> element and place its value in the <li> element
-infoAboutSelf.favoriteFoods(foreach)
 // Step 5: Append the <li> elements created above as children of the HTML <ul> element with an ID of favorite-foods
+infoAboutSelf.favoriteFoods.forEach(food => {
+    let foodItem = document.createElement("li");
+    foodItem.textContent = food;
+document.getElementById("favorite-foods").appendChild(foodItem);
+})
+
 // Step 6: Repeat Step 4 for each hobby in the hobbies property
 // Step 7: Repeat Step 5 using the HTML <ul> element with an ID of hobbies
+infoAboutSelf.hobbies.forEach(hobby => {
+    let hobbyItem = document.createElement("ul");
+    hobbyItem.textContent = hobby;
+document.getElementById("hobbies").appendChild(hobbyItem);
+})
 
 // Step 8: For each object in the <em>placesLived</em> property:
 // - Create an HTML <dt> element and put its place property in the <dt> element
 // - Create an HTML <dd> element and put its length property in the <dd> element
-
 // Step 9: Append the HTML <dt> and <dd> elements created above to the HTML <dl> element with an ID of places-lived
+infoAboutSelf.placesLived.forEach(placeLived => {
+    let placeItem = document.createElement("dt");
+    placeItem.textContent = placeLived.Place;
+
+    let lengthItem = document.createElement("dd");
+    lengthItem.textContent = placeLived.Length;
+
+document.getElementById("places-lived").appendChild(placeItem);
+document.getElementById("places-lived").appendChild(lengthItem);
+})
+
 
 
 
