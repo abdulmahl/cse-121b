@@ -69,9 +69,3 @@ infoAboutSelf.placesLived.forEach(placeLived => {
 document.getElementById("places-lived").appendChild(placeItem);
 document.getElementById("places-lived").appendChild(lengthItem);
 })
-
-
-
-
-
-
