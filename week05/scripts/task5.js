@@ -125,7 +125,7 @@ let reset = function () {
 // - Calls the output function passing in the sorted list of temples
 let sortBy = function(){
     reset();
-    const sortedList = templeList.sort(compare);
+    const sortedList = templeList.reverse(compare);
     output(sortedList)
 };
 
